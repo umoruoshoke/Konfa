@@ -1,0 +1,457 @@
+/* src/Pages/PublicSellerProfile.css */
+
+.psp-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  font-family: inherit;
+  color: #0f172a;
+}
+
+/* ---------- Loading ---------- */
+.psp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 120px 0;
+  color: #64748b;
+}
+.psp-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #0d9488;
+  border-radius: 50%;
+  animation: psp-spin 0.9s linear infinite;
+}
+@keyframes psp-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Top bar ---------- */
+.psp-topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.psp-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.psp-brand-shield {
+  width: 32px;
+  height: 32px;
+}
+.psp-brand-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0a1628;
+  letter-spacing: -0.01em;
+}
+.psp-topbar-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0d9488;
+  background: #f0fdfa;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* ---------- Main ---------- */
+.psp-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+/* ---------- Card ---------- */
+.psp-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06),
+              0 1px 3px rgba(15, 23, 42, 0.04);
+}
+.psp-card-center {
+  text-align: center;
+  padding: 60px 32px;
+  max-width: 520px;
+  margin: 80px auto;
+}
+.psp-notfound-shield {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  opacity: 0.8;
+}
+.psp-card-center h1 {
+  font-size: 1.4rem;
+  color: #0a1628;
+  margin: 0 0 10px;
+}
+.psp-card-center p {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0 0 22px;
+}
+
+/* ---------- Banner ---------- */
+.psp-banner {
+  background: linear-gradient(135deg, #0a1628 0%, #1a2d47 100%);
+  padding: 40px 36px 44px;
+  position: relative;
+  overflow: hidden;
+}
+.psp-banner-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.35) 0%, transparent 60%);
+  pointer-events: none;
+}
+.psp-banner-content { position: relative; z-index: 1; }
+.psp-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #86efac;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.psp-banner-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+}
+.psp-banner-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.psp-banner-cat {
+  font-size: 0.92rem;
+  color: #5eead4;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.psp-banner-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ---------- Sections ---------- */
+.psp-summary,
+.psp-accounts,
+.psp-business {
+  padding: 30px 36px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.psp-section-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 18px;
+}
+
+/* ---------- Verification list ---------- */
+.psp-verification-list { display: flex; flex-direction: column; gap: 14px; }
+.psp-verification-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.psp-verification-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.psp-verification-ok .psp-verification-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.psp-verification-muted .psp-verification-icon {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+.psp-verification-body strong {
+  color: #0a1628;
+  display: block;
+  font-size: 0.94rem;
+  margin-bottom: 3px;
+}
+.psp-verification-body span {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.psp-verification-body span strong {
+  display: inline;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* ---------- Accounts list ---------- */
+.psp-accounts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.psp-account-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.psp-account-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+.psp-account-platform {
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 11px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 82px;
+  text-align: center;
+}
+.psp-account-handle {
+  flex: 1;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #0f172a;
+  word-break: break-all;
+}
+.psp-account-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+.psp-account-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #dcfce7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #16a34a;
+}
+.psp-account-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0d9488;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #f0fdfa;
+  white-space: nowrap;
+}
+.psp-account-link:hover { background: #ccfbf1; }
+
+/* ---------- Business details ---------- */
+.psp-business-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px 24px;
+}
+.psp-detail { display: flex; flex-direction: column; gap: 3px; }
+.psp-detail-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.psp-detail-value {
+  font-size: 0.92rem;
+  color: #0f172a;
+  word-break: break-word;
+  line-height: 1.45;
+}
+.psp-detail-value a {
+  color: #0d9488;
+  text-decoration: none;
+  font-weight: 600;
+}
+.psp-detail-value a:hover { text-decoration: underline; }
+
+/* ---------- Disclaimer ---------- */
+.psp-disclaimer {
+  padding: 22px 36px;
+  background: #fffbeb;
+  border-top: 1px solid #fef3c7;
+  border-bottom: 1px solid #fef3c7;
+}
+.psp-disclaimer strong {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.psp-disclaimer p {
+  margin: 0;
+  color: #78350f;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+/* ---------- Footer stamp ---------- */
+.psp-footer {
+  padding: 20px 36px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #f8fafc;
+}
+.psp-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.psp-footer-shield {
+  width: 38px;
+  height: 38px;
+}
+.psp-footer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.psp-footer-url {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a1628;
+  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+  margin-top: 2px;
+}
+.psp-footer-right { text-align: right; }
+.psp-footer-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a1628;
+  margin-top: 2px;
+}
+
+/* ---------- CTA ---------- */
+.psp-cta {
+  margin-top: 28px;
+  padding: 22px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.psp-cta p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ---------- Buttons ---------- */
+.psp-btn {
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.15s ease;
+}
+.psp-btn-primary {
+  background: #0d9488;
+  color: #ffffff;
+}
+.psp-btn-primary:hover { background: #0f766e; }
+
+/* ---------- Print ---------- */
+@media print {
+  .psp-topbar,
+  .psp-cta { display: none; }
+  .psp-page { background: #ffffff; }
+  .psp-card { box-shadow: none; border: 1px solid #e2e8f0; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .psp-main { padding: 20px 12px 40px; }
+  .psp-banner { padding: 28px 22px 32px; }
+  .psp-banner-title { font-size: 1.5rem; }
+  .psp-summary,
+  .psp-accounts,
+  .psp-business,
+  .psp-disclaimer,
+  .psp-footer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .psp-account-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .psp-account-platform { min-width: 0; }
+  .psp-footer { flex-direction: column; align-items: flex-start; }
+  .psp-footer-right { text-align: left; }
+  .psp-cta { flex-direction: column; align-items: stretch; }
+  .psp-cta .psp-btn { text-align: center; }
+}

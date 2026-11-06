@@ -1,0 +1,163 @@
+/* src/seller/verification/IdentityUpload.css */
+
+/* ---------- Upload widget ---------- */
+.iu-widget {
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+  background: #f8fafc;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.iu-widget:hover { border-color: #0d9488; background: #f0fdfa; }
+.iu-widget.has-image { border-style: solid; border-color: #e2e8f0; background: #ffffff; }
+.iu-widget.error { border-color: #dc2626; background: #fef2f2; }
+
+.iu-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+.iu-hint {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ---------- Drop zone ---------- */
+.iu-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+.iu-drop:hover { background: #ffffff; }
+.iu-drop-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0d9488;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.iu-drop-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0a1628;
+}
+.iu-drop-sub {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+/* ---------- Preview ---------- */
+.iu-preview {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.iu-preview-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+.iu-preview-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.iu-preview-name {
+  font-size: 0.85rem;
+  color: #0f172a;
+  word-break: break-all;
+  font-weight: 500;
+}
+.iu-preview-meta {
+  font-size: 0.74rem;
+  color: #94a3b8;
+}
+.iu-preview-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* ---------- Upload progress ---------- */
+.iu-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.iu-progress-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #475569;
+  font-weight: 600;
+}
+.iu-progress-track {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.iu-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #0d9488);
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+/* ---------- Small buttons ---------- */
+.iu-btn {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.iu-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.iu-btn-primary { background: #0d9488; color: #ffffff; }
+.iu-btn-primary:hover:not(:disabled) { background: #0f766e; }
+.iu-btn-ghost {
+  background: transparent;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+.iu-btn-ghost:hover:not(:disabled) { background: #f8fafc; }
+.iu-btn-danger {
+  color: #b91c1c;
+  border-color: #fecaca;
+  background: transparent;
+}
+.iu-btn-danger:hover:not(:disabled) { background: #fef2f2; }
+
+/* ---------- Error ---------- */
+.iu-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-size: 0.82rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+}

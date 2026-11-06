@@ -1,0 +1,516 @@
+/* src/admin/AdminScanAnalytics.css */
+
+/* ============================================================
+   CHART CARDS
+   ============================================================ */
+.admin-scan-card {
+  background: #fff;
+  border: 1px solid var(--ad-slate-200);
+  border-radius: var(--ad-radius);
+  padding: 20px 22px 24px;
+  box-shadow: var(--ad-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-scan-card-header h2 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ad-navy);
+  margin: 0 0 2px;
+  letter-spacing: -0.3px;
+}
+
+.admin-scan-card-header p {
+  font-size: 12.5px;
+  color: var(--ad-slate-500);
+  margin: 0;
+}
+
+.admin-scan-chart {
+  width: 100%;
+  cursor: pointer;
+}
+
+.admin-scan-empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--ad-slate-400);
+  font-size: 13px;
+}
+
+/* ============================================================
+   TWO-COLUMN GRID
+   ============================================================ */
+.admin-scan-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .admin-scan-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   SELECTS IN TOOLBAR
+   ============================================================ */
+.admin-select {
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-family: inherit;
+  border: 1.5px solid var(--ad-slate-200);
+  border-radius: var(--ad-radius-sm);
+  background: #fff;
+  color: var(--ad-navy);
+  outline: none;
+  transition: all var(--ad-transition);
+  cursor: pointer;
+}
+
+.admin-select:focus {
+  border-color: var(--ad-teal);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+/* ============================================================
+   TABLE CARD
+   ============================================================ */
+.admin-scan-table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.admin-scan-table-card .admin-card-header {
+  padding: 20px 24px 14px;
+  margin: 0;
+}
+
+.admin-scan-table-card .admin-card-table {
+  border: none;
+  border-top: 1px solid var(--ad-slate-100);
+  border-radius: 0;
+}
+
+/* Clickable table row */
+.admin-tr-clickable {
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.admin-tr-clickable:hover {
+  background: var(--ad-teal-50);
+}
+
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+.admin-scan-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--ad-slate-100);
+  font-size: 13px;
+  color: var(--ad-slate-500);
+}
+
+/* ============================================================
+   CLICKABLE STAT CARDS
+   ============================================================ */
+.admin-stat-clickable {
+  cursor: pointer;
+  transition: all var(--ad-transition);
+  text-align: left;
+  font-family: inherit;
+  padding: 20px 22px;
+}
+
+.admin-stat-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(10, 22, 40, 0.08);
+  border-color: var(--ad-teal);
+}
+
+/* ============================================================
+   RECOMMENDATION CARDS
+   ============================================================ */
+.admin-scan-recs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-scan-rec {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid;
+}
+
+.admin-scan-rec-critical {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.admin-scan-rec-warning {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #78350f;
+}
+
+.admin-scan-rec-info {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+  color: #075985;
+}
+
+.admin-scan-rec-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.admin-scan-rec-body strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.admin-scan-rec-body p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   SUMMARY BLOCK
+   ============================================================ */
+.admin-scan-summary {
+  background: #0a1628;
+  color: #e2e8f0;
+  padding: 20px 22px;
+  border-radius: 12px;
+  font-family: 'SF Mono', 'Courier New', monospace;
+  font-size: 12.5px;
+  line-height: 1.75;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre;
+}
+
+/* ============================================================
+   METHODOLOGY
+   ============================================================ */
+.admin-scan-method-body h3 {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ad-navy);
+  margin: 16px 0 6px;
+  letter-spacing: -0.2px;
+}
+
+.admin-scan-method-body h3:first-child {
+  margin-top: 0;
+}
+
+.admin-scan-method-body p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ad-slate-600);
+  margin: 0 0 8px;
+}
+
+.admin-scan-method-body ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--ad-slate-600);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.admin-scan-method-body code {
+  font-family: 'SF Mono', 'Courier New', monospace;
+  font-size: 11.5px;
+  background: var(--ad-slate-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   CONFIDENCE CHIP + BREAKDOWN
+   ============================================================ */
+.admin-scan-confidence {
+  font-size: 13px;
+  color: var(--ad-slate-500);
+  margin-left: auto;
+  align-self: center;
+}
+
+.admin-scan-confidence strong {
+  font-weight: 800;
+}
+
+.admin-scan-conf-high { color: #16a34a; }
+.admin-scan-conf-mid  { color: #d97706; }
+.admin-scan-conf-low  { color: #dc2626; }
+
+.admin-scan-confidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.admin-confidence-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-confidence-bar-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ad-navy);
+}
+
+.admin-confidence-bar-head strong {
+  font-weight: 800;
+}
+
+.admin-confidence-bar-track {
+  height: 8px;
+  background: var(--ad-slate-100);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.admin-confidence-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+.admin-confidence-bar-desc {
+  font-size: 11.5px;
+  color: var(--ad-slate-400);
+}
+
+/* ============================================================
+   🆕 DETAIL DRAWER
+   ============================================================ */
+.admin-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  animation: admin-drawer-fade 0.18s ease;
+}
+
+@keyframes admin-drawer-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.admin-drawer {
+  width: min(520px, 100vw);
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 40px rgba(10, 22, 40, 0.15);
+  animation: admin-drawer-slide 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+@keyframes admin-drawer-slide {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.admin-drawer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px 16px;
+  border-bottom: 1px solid var(--ad-slate-100);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.admin-drawer-header h2 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ad-navy);
+  margin: 0 0 2px;
+  letter-spacing: -0.4px;
+}
+
+.admin-drawer-header p {
+  font-size: 13px;
+  color: var(--ad-slate-500);
+  margin: 0;
+}
+
+.admin-drawer-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ad-slate-200);
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--ad-slate-500);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.admin-drawer-close:hover {
+  background: var(--ad-slate-50);
+  color: var(--ad-navy);
+  border-color: var(--ad-slate-300);
+}
+
+.admin-drawer-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--ad-slate-100);
+}
+
+.admin-drawer-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  background: var(--ad-slate-50);
+  border-radius: 10px;
+}
+
+.admin-drawer-meta-item span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--ad-slate-400);
+}
+
+.admin-drawer-meta-item strong {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ad-navy);
+}
+
+.admin-drawer-list {
+  padding: 18px 24px 32px;
+}
+
+.admin-drawer-list h3 {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ad-slate-400);
+  margin: 0 0 12px;
+}
+
+.admin-drawer-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-drawer-scan {
+  padding: 12px 14px;
+  background: var(--ad-slate-50);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-drawer-scan-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-drawer-scan-time {
+  font-size: 11.5px;
+  color: var(--ad-slate-400);
+}
+
+.admin-drawer-scan-code {
+  font-size: 12.5px;
+  color: var(--ad-slate-600);
+}
+
+.admin-drawer-scan-flag {
+  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.admin-drawer-more {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--ad-slate-400);
+  padding: 12px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  .admin-scan-card {
+    padding: 16px 16px 20px;
+  }
+
+  .admin-scan-table-card .admin-card-header {
+    padding: 16px 16px 12px;
+  }
+
+  .admin-drawer {
+    width: 100vw;
+  }
+
+  .admin-drawer-meta {
+    grid-template-columns: 1fr;
+  }
+}

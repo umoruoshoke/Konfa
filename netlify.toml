@@ -1,0 +1,23 @@
+# netlify.toml
+
+[build]
+  command = "npm run build"
+  publish = "build"
+  # If your project uses Vite, change "build" to "dist"
+
+# ---------------------------------------------
+# API route — points /api/* to Netlify Functions
+# ---------------------------------------------
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+# ---------------------------------------------
+# SPA fallback — needed for React Router
+# ---------------------------------------------
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
